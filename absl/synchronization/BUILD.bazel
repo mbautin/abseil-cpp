@@ -27,6 +27,7 @@ licenses(["notice"])
 
 # Internal data structure for efficiently detecting mutex dependency cycles
 cc_library(
+    alwayslink = True,
     name = "graphcycles_internal",
     srcs = [
         "internal/graphcycles.cc",
@@ -52,6 +53,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "kernel_timeout_internal",
     hdrs = ["internal/kernel_timeout.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -67,6 +69,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "synchronization",
     srcs = [
         "barrier.cc",
@@ -190,6 +193,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "thread_pool",
     testonly = 1,
     hdrs = ["internal/thread_pool.h"],
@@ -224,6 +228,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "mutex_benchmark_common",
     testonly = 1,
     srcs = ["mutex_benchmark.cc"],
@@ -239,7 +244,6 @@ cc_library(
         "//absl/base:config",
         "@com_github_google_benchmark//:benchmark_main",
     ],
-    alwayslink = 1,
 )
 
 cc_binary(
@@ -268,6 +272,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "per_thread_sem_test_common",
     testonly = 1,
     srcs = ["internal/per_thread_sem_test.cc"],
@@ -281,7 +286,6 @@ cc_library(
         "//absl/time",
         "@com_google_googletest//:gtest",
     ],
-    alwayslink = 1,
 )
 
 cc_test(

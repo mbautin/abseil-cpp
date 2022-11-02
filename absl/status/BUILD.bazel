@@ -29,6 +29,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "status",
     srcs = [
         "internal/status_internal.h",
@@ -69,6 +70,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "statusor",
     srcs = [
         "internal/statusor_internal.h",

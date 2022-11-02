@@ -25,6 +25,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "any",
     hdrs = ["any.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -40,6 +41,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "bad_any_cast",
     hdrs = ["bad_any_cast.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -51,6 +53,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "bad_any_cast_impl",
     srcs = [
         "bad_any_cast.cc",
@@ -97,6 +100,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "span",
     srcs = [
         "internal/span.h",
@@ -134,6 +138,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "optional",
     srcs = ["internal/optional.h"],
     hdrs = ["optional.h"],
@@ -151,6 +156,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "bad_optional_access",
     srcs = ["bad_optional_access.cc"],
     hdrs = ["bad_optional_access.h"],
@@ -163,6 +169,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "bad_variant_access",
     srcs = ["bad_variant_access.cc"],
     hdrs = ["bad_variant_access.h"],
@@ -208,6 +215,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "conformance_testing",
     testonly = 1,
     hdrs = [
@@ -246,6 +254,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "variant",
     srcs = ["internal/variant.h"],
     hdrs = ["variant.h"],
@@ -311,6 +320,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "compare",
     hdrs = ["compare.h"],
     copts = ABSL_DEFAULT_COPTS,

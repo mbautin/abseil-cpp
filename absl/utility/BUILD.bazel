@@ -26,6 +26,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "utility",
     hdrs = [
         "utility.h",

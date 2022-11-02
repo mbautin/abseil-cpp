@@ -26,6 +26,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "compressed_tuple",
     hdrs = ["internal/compressed_tuple.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -52,6 +53,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "fixed_array",
     hdrs = ["fixed_array.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -110,6 +112,7 @@ cc_binary(
 )
 
 cc_library(
+    alwayslink = True,
     name = "inlined_vector_internal",
     hdrs = ["internal/inlined_vector.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -124,6 +127,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "inlined_vector",
     hdrs = ["inlined_vector.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -139,6 +143,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "counting_allocator",
     testonly = 1,
     hdrs = ["internal/counting_allocator.h"],
@@ -197,6 +202,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "test_instance_tracker",
     testonly = 1,
     srcs = ["internal/test_instance_tracker.cc"],
@@ -228,6 +234,7 @@ NOTEST_TAGS_MOBILE = [
 ]
 
 cc_library(
+    alwayslink = True,
     name = "flat_hash_map",
     hdrs = ["flat_hash_map.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -262,6 +269,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "flat_hash_set",
     hdrs = ["flat_hash_set.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -297,6 +305,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "node_hash_map",
     hdrs = ["node_hash_map.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -331,6 +340,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "node_hash_set",
     hdrs = ["node_hash_set.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -362,6 +372,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "container_memory",
     hdrs = ["internal/container_memory.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -389,6 +400,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "hash_function_defaults",
     hdrs = ["internal/hash_function_defaults.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -419,6 +431,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "hash_generator_testing",
     testonly = 1,
     srcs = ["internal/hash_generator_testing.cc"],
@@ -434,6 +447,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "hash_policy_testing",
     testonly = 1,
     hdrs = ["internal/hash_policy_testing.h"],
@@ -457,6 +471,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "hash_policy_traits",
     hdrs = ["internal/hash_policy_traits.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -479,6 +494,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "common_policy_traits",
     hdrs = ["internal/common_policy_traits.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -499,6 +515,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "hashtable_debug",
     hdrs = ["internal/hashtable_debug.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -509,6 +526,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "hashtable_debug_hooks",
     hdrs = ["internal/hashtable_debug_hooks.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -519,6 +537,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "hashtablez_sampler",
     srcs = [
         "internal/hashtablez_sampler.cc",
@@ -560,6 +579,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "node_slot_policy",
     hdrs = ["internal/node_slot_policy.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -580,6 +600,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "raw_hash_map",
     hdrs = ["internal/raw_hash_map.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -592,6 +613,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "common",
     hdrs = ["internal/common.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -603,6 +625,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "raw_hash_set",
     srcs = ["internal/raw_hash_set.cc"],
     hdrs = ["internal/raw_hash_set.h"],
@@ -709,6 +732,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "layout",
     hdrs = ["internal/layout.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -758,6 +782,7 @@ cc_binary(
 )
 
 cc_library(
+    alwayslink = True,
     name = "tracked",
     testonly = 1,
     hdrs = ["internal/tracked.h"],
@@ -769,6 +794,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "unordered_map_constructor_test",
     testonly = 1,
     hdrs = ["internal/unordered_map_constructor_test.h"],
@@ -782,6 +808,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "unordered_map_lookup_test",
     testonly = 1,
     hdrs = ["internal/unordered_map_lookup_test.h"],
@@ -795,6 +822,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "unordered_map_modifiers_test",
     testonly = 1,
     hdrs = ["internal/unordered_map_modifiers_test.h"],
@@ -808,6 +836,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "unordered_set_constructor_test",
     testonly = 1,
     hdrs = ["internal/unordered_set_constructor_test.h"],
@@ -822,6 +851,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "unordered_set_members_test",
     testonly = 1,
     hdrs = ["internal/unordered_set_members_test.h"],
@@ -834,6 +864,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "unordered_map_members_test",
     testonly = 1,
     hdrs = ["internal/unordered_map_members_test.h"],
@@ -846,6 +877,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "unordered_set_lookup_test",
     testonly = 1,
     hdrs = ["internal/unordered_set_lookup_test.h"],
@@ -859,6 +891,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "unordered_set_modifiers_test",
     testonly = 1,
     hdrs = ["internal/unordered_set_modifiers_test.h"],
@@ -918,6 +951,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "btree",
     srcs = [
         "internal/btree.h",
@@ -949,6 +983,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "btree_test_common",
     testonly = 1,
     hdrs = ["btree_test.h"],

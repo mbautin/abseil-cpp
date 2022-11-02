@@ -26,6 +26,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "path_util",
     hdrs = [
         "internal/path_util.h",
@@ -42,6 +43,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "program_name",
     srcs = [
         "internal/program_name.cc",
@@ -65,6 +67,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "config",
     srcs = [
         "usage_config.cc",
@@ -86,6 +89,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "marshalling",
     srcs = [
         "marshalling.cc",
@@ -106,6 +110,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "commandlineflag_internal",
     srcs = [
         "internal/commandlineflag.cc",
@@ -125,6 +130,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "commandlineflag",
     srcs = [
         "commandlineflag.cc",
@@ -144,6 +150,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "private_handle_accessor",
     srcs = [
         "internal/private_handle_accessor.cc",
@@ -165,6 +172,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "reflection",
     srcs = [
         "reflection.cc",
@@ -189,6 +197,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "flag_internal",
     srcs = [
         "internal/flag.cc",
@@ -219,6 +228,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "flag",
     srcs = [
         "flag.cc",
@@ -242,6 +252,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "usage_internal",
     srcs = [
         "internal/usage.cc",
@@ -271,6 +282,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "usage",
     srcs = [
         "usage.cc",
@@ -290,6 +302,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "parse",
     srcs = ["parse.cc"],
     hdrs = [

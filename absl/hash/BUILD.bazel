@@ -26,6 +26,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "hash",
     srcs = [
         "internal/hash.cc",
@@ -52,6 +53,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "hash_testing",
     testonly = 1,
     hdrs = ["hash_testing.h"],
@@ -108,6 +110,7 @@ cc_binary(
 )
 
 cc_library(
+    alwayslink = True,
     name = "spy_hash_state",
     testonly = 1,
     hdrs = ["internal/spy_hash_state.h"],
@@ -122,6 +125,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "city",
     srcs = ["internal/city.cc"],
     hdrs = [
@@ -148,6 +152,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "low_level_hash",
     srcs = ["internal/low_level_hash.cc"],
     hdrs = ["internal/low_level_hash.h"],

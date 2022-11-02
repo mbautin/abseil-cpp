@@ -28,6 +28,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "random",
     hdrs = ["random.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -43,6 +44,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "distributions",
     srcs = [
         "discrete_distribution.cc",
@@ -82,6 +84,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "seed_gen_exception",
     srcs = ["seed_gen_exception.cc"],
     hdrs = ["seed_gen_exception.h"],
@@ -91,6 +94,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "seed_sequences",
     srcs = ["seed_sequences.cc"],
     hdrs = [
@@ -109,6 +113,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "bit_gen_ref",
     hdrs = ["bit_gen_ref.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -124,6 +129,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "mock_distributions",
     testonly = 1,
     hdrs = ["mock_distributions.h"],
@@ -138,6 +144,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "mocking_bit_gen",
     testonly = 1,
     hdrs = [

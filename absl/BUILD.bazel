@@ -14,6 +14,13 @@
 # limitations under the License.
 
 load("@bazel_skylib//lib:selects.bzl", "selects")
+load(
+    "//absl:copts/configure_copts.bzl",
+    "ABSL_DEFAULT_COPTS",
+    "ABSL_DEFAULT_LINKOPTS",
+    "ABSL_TEST_COPTS",
+)
+load("//absl:cc_static_library.bzl", "cc_static_library")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -122,4 +129,59 @@ config_setting(
         "cpu": "fuchsia",
     },
     visibility = [":__subpackages__"],
+)
+
+# This is a manually compiled list of the components we use from tcmalloc (which is currently the 
+# only user of abseil).
+cc_library(
+    alwayslink = True,
+    name = "absl",
+    copts = ABSL_DEFAULT_COPTS,
+    linkopts = ABSL_DEFAULT_LINKOPTS,
+    deps = [
+        "//absl/algorithm:container",
+        "//absl/base",
+        "//absl/base:config",
+        "//absl/base:core_headers",
+        "//absl/base:dynamic_annotations",
+        "//absl/base:malloc_internal",
+        "//absl/cleanup",
+        "//absl/container:fixed_array",
+        "//absl/container:flat_hash_map",
+        "//absl/container:flat_hash_set",
+        "//absl/container:node_hash_set",
+        "//absl/debugging:leak_check",
+        "//absl/debugging:stacktrace",
+        "//absl/debugging:symbolize",
+        "//absl/flags:flag",
+        "//absl/functional:function_ref",
+        "//absl/hash:hash",
+        "//absl/memory",
+        "//absl/numeric:bits",
+        "//absl/random",
+        "//absl/random:bit_gen_ref",
+        "//absl/random:distributions",
+        "//absl/status",
+        "//absl/status:statusor",
+        "//absl/strings",
+        "//absl/strings:str_format",
+        "//absl/synchronization",
+        "//absl/time",
+        "//absl/types:optional",
+        "//absl/types:span",
+    ],
+)
+
+cc_binary(
+    name = "absl_shared",
+    deps = [
+        ":absl",
+    ],
+    linkshared = True,
+)
+
+# Uses the custom rule in cc_static_library.bzl
+cc_static_library(
+    name = "absl_static",
+    dep = ":absl"
 )

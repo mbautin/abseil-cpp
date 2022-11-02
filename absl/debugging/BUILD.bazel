@@ -28,6 +28,7 @@ package(
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "stacktrace",
     srcs = [
         "internal/stacktrace_aarch64-inl.inc",
@@ -54,6 +55,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "symbolize",
     srcs = [
         "symbolize.cc",
@@ -113,6 +115,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "examine_stack",
     srcs = [
         "internal/examine_stack.cc",
@@ -133,6 +136,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "failure_signal_handler",
     srcs = ["failure_signal_handler.cc"],
     hdrs = ["failure_signal_handler.h"],
@@ -169,6 +173,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "debugging_internal",
     srcs = [
         "internal/address_is_readable.cc",
@@ -193,6 +198,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "demangle_internal",
     srcs = ["internal/demangle.cc"],
     hdrs = ["internal/demangle.h"],
@@ -223,6 +229,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "leak_check",
     srcs = ["leak_check.cc"],
     hdrs = ["leak_check.h"],
@@ -266,6 +273,7 @@ cc_binary(
 )
 
 cc_library(
+    alwayslink = True,
     name = "stack_consumption",
     testonly = 1,
     srcs = ["internal/stack_consumption.cc"],

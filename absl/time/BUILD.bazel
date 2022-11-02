@@ -26,6 +26,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "time",
     srcs = [
         "civil_time.cc",
@@ -57,6 +58,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "test_util",
     testonly = 1,
     srcs = [

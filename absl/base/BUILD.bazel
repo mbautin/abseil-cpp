@@ -26,6 +26,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "atomic_hook",
     hdrs = ["internal/atomic_hook.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -40,6 +41,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "errno_saver",
     hdrs = ["internal/errno_saver.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -51,6 +53,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "log_severity",
     srcs = ["log_severity.cc"],
     hdrs = ["log_severity.h"],
@@ -63,6 +66,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "raw_logging_internal",
     srcs = ["internal/raw_logging.cc"],
     hdrs = ["internal/raw_logging.h"],
@@ -81,6 +85,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "spinlock_wait",
     srcs = [
         "internal/spinlock_akaros.inc",
@@ -103,6 +108,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "config",
     hdrs = [
         "config.h",
@@ -114,6 +120,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "cycleclock_internal",
     hdrs = [
         "internal/cycleclock_config.h",
@@ -131,6 +138,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "dynamic_annotations",
     srcs = [
         "internal/dynamic_annotations.h",
@@ -147,6 +155,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "core_headers",
     srcs = [
         "internal/thread_annotations.h",
@@ -167,6 +176,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "malloc_internal",
     srcs = [
         "internal/low_level_alloc.cc",
@@ -198,6 +208,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "base_internal",
     hdrs = [
         "internal/hide_ptr.h",
@@ -218,6 +229,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "base",
     srcs = [
         "internal/cycleclock.cc",
@@ -264,6 +276,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "atomic_hook_test_helper",
     testonly = 1,
     srcs = ["internal/atomic_hook_test_helper.cc"],
@@ -306,6 +319,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "throw_delegate",
     srcs = ["internal/throw_delegate.cc"],
     hdrs = ["internal/throw_delegate.h"],
@@ -346,6 +360,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "exception_testing",
     testonly = 1,
     hdrs = ["internal/exception_testing.h"],
@@ -361,6 +376,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "pretty_function",
     hdrs = ["internal/pretty_function.h"],
     linkopts = ABSL_DEFAULT_LINKOPTS,
@@ -368,6 +384,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "exception_safety_testing",
     testonly = 1,
     srcs = ["internal/exception_safety_testing.cc"],
@@ -431,6 +448,7 @@ cc_test(
 # Common test library made available for use in non-absl code that overrides
 # AbslInternalSpinLockDelay and AbslInternalSpinLockWake.
 cc_library(
+    alwayslink = True,
     name = "spinlock_test_common",
     testonly = 1,
     srcs = ["spinlock_test_common.cc"],
@@ -444,7 +462,6 @@ cc_library(
         "//absl/synchronization",
         "@com_google_googletest//:gtest",
     ],
-    alwayslink = 1,
 )
 
 cc_test(
@@ -467,6 +484,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "spinlock_benchmark_common",
     testonly = 1,
     srcs = ["internal/spinlock_benchmark.cc"],
@@ -482,7 +500,6 @@ cc_library(
         "//absl/synchronization",
         "@com_github_google_benchmark//:benchmark_main",
     ],
-    alwayslink = 1,
 )
 
 cc_binary(
@@ -498,6 +515,7 @@ cc_binary(
 )
 
 cc_library(
+    alwayslink = True,
     name = "endian",
     hdrs = [
         "internal/endian.h",
@@ -621,6 +639,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "scoped_set_env",
     testonly = 1,
     srcs = ["internal/scoped_set_env.cc"],
@@ -663,6 +682,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "strerror",
     srcs = ["internal/strerror.cc"],
     hdrs = ["internal/strerror.h"],
@@ -706,6 +726,7 @@ cc_binary(
 )
 
 cc_library(
+    alwayslink = True,
     name = "fast_type_id",
     hdrs = ["internal/fast_type_id.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -731,6 +752,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "prefetch",
     hdrs = ["internal/prefetch.h"],
     copts = ABSL_DEFAULT_COPTS,

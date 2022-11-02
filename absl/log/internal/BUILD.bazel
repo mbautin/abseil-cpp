@@ -28,6 +28,7 @@ package(default_visibility = [
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "check_op",
     srcs = ["check_op.cc"],
     hdrs = ["check_op.h"],
@@ -47,6 +48,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "conditions",
     srcs = ["conditions.cc"],
     hdrs = ["conditions.h"],
@@ -61,6 +63,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "config",
     hdrs = ["config.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -75,6 +78,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "flags",
     hdrs = ["flags.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -85,6 +89,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "format",
     srcs = ["log_format.cc"],
     hdrs = ["log_format.h"],
@@ -104,6 +109,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "globals",
     srcs = ["globals.cc"],
     hdrs = ["globals.h"],
@@ -123,6 +129,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "log_message",
     srcs = ["log_message.cc"],
     hdrs = ["log_message.h"],
@@ -159,6 +166,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "log_sink_set",
     srcs = ["log_sink_set.cc"],
     hdrs = ["log_sink_set.h"],
@@ -186,6 +194,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "nullguard",
     hdrs = ["nullguard.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -196,6 +205,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "nullstream",
     hdrs = ["nullstream.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -209,6 +219,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "strip",
     hdrs = ["strip.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -221,6 +232,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "test_actions",
     testonly = True,
     srcs = ["test_actions.cc"],
@@ -238,6 +250,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "test_helpers",
     testonly = True,
     srcs = ["test_helpers.cc"],
@@ -255,6 +268,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "test_matchers",
     testonly = True,
     srcs = ["test_matchers.cc"],
@@ -274,6 +288,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "voidify",
     hdrs = ["voidify.h"],
     copts = ABSL_DEFAULT_COPTS,

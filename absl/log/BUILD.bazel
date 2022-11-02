@@ -27,6 +27,7 @@ licenses(["notice"])
 
 # Public targets
 cc_library(
+    alwayslink = True,
     name = "check",
     hdrs = ["check.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -41,6 +42,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "die_if_null",
     srcs = ["die_if_null.cc"],
     hdrs = ["die_if_null.h"],
@@ -55,6 +57,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "flags",
     srcs = ["flags.cc"],
     hdrs = ["flags.h"],
@@ -77,6 +80,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "globals",
     srcs = ["globals.cc"],
     hdrs = ["globals.h"],
@@ -94,6 +98,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "initialize",
     srcs = ["initialize.cc"],
     hdrs = ["initialize.h"],
@@ -109,6 +114,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "log",
     hdrs = ["log.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -121,6 +127,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "log_entry",
     srcs = ["log_entry.cc"],
     hdrs = ["log_entry.h"],
@@ -138,6 +145,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "log_sink",
     srcs = ["log_sink.cc"],
     hdrs = ["log_sink.h"],
@@ -150,6 +158,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "log_sink_registry",
     hdrs = ["log_sink_registry.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -162,6 +171,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "log_streamer",
     hdrs = ["log_streamer.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -178,6 +188,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "scoped_mock_log",
     testonly = True,
     srcs = ["scoped_mock_log.cc"],

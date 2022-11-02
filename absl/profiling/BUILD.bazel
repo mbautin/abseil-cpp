@@ -24,6 +24,7 @@ package(default_visibility = ["//visibility:private"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "sample_recorder",
     hdrs = ["internal/sample_recorder.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -57,6 +58,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "exponential_biased",
     srcs = ["internal/exponential_biased.cc"],
     hdrs = ["internal/exponential_biased.h"],
@@ -85,6 +87,7 @@ cc_test(
 )
 
 cc_library(
+    alwayslink = True,
     name = "periodic_sampler",
     srcs = ["internal/periodic_sampler.cc"],
     hdrs = ["internal/periodic_sampler.h"],

@@ -24,6 +24,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "cleanup_internal",
     hdrs = ["internal/cleanup.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -36,6 +37,7 @@ cc_library(
 )
 
 cc_library(
+    alwayslink = True,
     name = "cleanup",
     hdrs = [
         "cleanup.h",

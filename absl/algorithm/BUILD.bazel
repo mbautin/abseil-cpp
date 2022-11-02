@@ -26,6 +26,7 @@ package(default_visibility = ["//visibility:public"])
 licenses(["notice"])
 
 cc_library(
+    alwayslink = True,
     name = "algorithm",
     hdrs = ["algorithm.h"],
     copts = ABSL_DEFAULT_COPTS,
@@ -63,6 +64,7 @@ cc_binary(
 )
 
 cc_library(
+    alwayslink = True,
     name = "container",
     hdrs = [
         "container.h",
