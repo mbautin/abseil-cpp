@@ -17,6 +17,7 @@
 
 #include <numeric>
 #include <vector>
+#include <cstdint>
 
 #include "absl/strings/string_view.h"
 
